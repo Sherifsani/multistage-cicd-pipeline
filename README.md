@@ -19,6 +19,45 @@ This project demonstrates a complete DevOps workflow:
 
 ```
 Git Push → Azure DevOps Pipeline → ACR → AKS
+
++------------------+
+|   Developer      |
+|  (Git Push)      |
++--------+---------+
+         |
+         v
++-----------------------------+
+|      Azure DevOps           |
+|     CI/CD Pipeline          |
+|                             |
+|  - Build .NET App           |
+|  - Build Docker Image       |
+|  - Push Image to ACR        |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+|   Azure Container Registry  |
+|          (ACR)              |
+|   Stores Docker Images      |
++-------------+---------------+
+              |
+              v
++-----------------------------+
+| Azure Kubernetes Service    |
+|            (AKS)            |
+|                             |
+|  - Pull image from ACR      |
+|  - Run Pods (Replicas)      |
+|  - Expose via Service       |
++-----------------------------+
+              |
+              v
++-----------------------------+
+|     End Users / Browser     |
+|   Access via LoadBalancer  |
++-----------------------------+
+
 ```
 
 ---
