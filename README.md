@@ -69,3 +69,5 @@ az aks update \
   --attach-acr cicdimagerepo
 
 ```
+
+### 6. Create the service connections in Azure Devops
