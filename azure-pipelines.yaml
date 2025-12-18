@@ -24,7 +24,7 @@ stages:
         containerRegistry: acr-connection
         repository: $(imageName)
         command: buildAndPush
-        Dockerfile: docker/Dockerfile
+        Dockerfile: Dockerfile
         tags: |
           $(tag)
           latest
