@@ -31,11 +31,10 @@ Git Push → Azure DevOps Pipeline → ACR → AKS
 │   └── WebApp/
 │       ├── WebApp.csproj
 │       └── Program.cs
-├── docker/
-│   └── Dockerfile
 ├── k8s/
 │   ├── deployment.yaml
 │   └── service.yaml
+├── Dockerfile
 ├── azure-pipelines.yml
 └── README.md
 ```
